@@ -1,6 +1,7 @@
 import { createClient } from '@vercel/postgres';
 import { unstable_noStore as noStore } from 'next/cache';
 import { sql } from '@vercel/postgres';
+
 export async function connectToDB() {
   const client = createClient();
   await client.connect();
